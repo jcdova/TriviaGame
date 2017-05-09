@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia Game</title>
+
+    <!-- Added link to the jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+<body>
+<div id="hideAll" class="container">
+    <div class="jumbotron" style="background: #008B8B; color: white;">
+        <h1 class="text-center"><strong>A Word Trivia Game!</strong></h1>
+    </div>
+    	<div id="time">
+			<div class="panel panel-primary" style="display: flex; justify-content: center; border-color: white">
+				<div id="display" class="panel-heading" style="background: #C71585; color: black;">
+					<h2 class="panel-heading text-center"><strong>Time Remaining: 00:00</strong></h2>
+				</div>
+			</div>
+		</div>
+		<div id="startButton">
+			<div id="startButton" style="display: flex; justify-content: center;">
+				<button style="width: 200px; height: 80px; margin-bottom: 20px; background-color: #212074;     font-size: 40px;" type="button" class="btn btn-primary btn-lg">Start</button>
+			</div>
+		</div>
+	<form name="questions">
+	<div id="questionsContainer">
+			
+		<div class="panel panel-primary">
+			<div id="question1" class="panel-heading" style="background: #696969">
+				<h4>Question 1</h4>
+			</div>
+			<div class="panel-body">
+				<p>1. When youʼre capernoited, what are you?</p>
+				<p>
+			        <label><input type="radio" name="q1" value="a. Slighty afraid" /> a. Slighty afraid </label>
+			        <label><input type="radio" name="q1" value="b. Slighty drunk" /> b. Slighty drunk </label>
+			        <label><input type="radio" name="q1" value="c. Slightly embarrassed" /> c. Slightly embarrassed </label>
+			        <label><input type="radio" name="q1" value="d. Slightly out of tune" /> d. Slightly out of tune </label>
+			    </p>	
+			</div>
+		</div>	
+
+		<div class="panel panel-primary">
+			<div id="question2" class="panel-heading" style="background: #696969">
+				<h4>Question 2</h4>
+			</div>
+			<div class="panel-body">
+				<p>2. Cleromancy is divination involving what?</p>
+				<p>
+			        <label><input type="radio" name="q2" value="a. Dice" /> a. Dice </label>
+			        <label><input type="radio" name="q2" value="b. Glass" /> b. Glass </label>
+			        <label><input type="radio" name="q2" value="c. Twigs" /> c. Twigs </label>
+			        <label><input type="radio" name="q2" value="d. Ink" /> d. Ink </label>
+			    </p>  	
+			</div>
+		</div>
+
+		<!-- <div class="panel panel-primary">
+			<div id="question3" class="panel-heading" style="background: #696969">
+				<h4>Question 3</h4>
+			</div>
+			<div class="panel-body">
+				<p>3. What does a nuxodeltiologist prefer postcard scenes of?</p>
+				<p>
+			        <label><input type="radio" name="q3" value="a" /> a. The Road </label>
+			        <label><input type="radio" name="q3" value="b" /> b. The Trees </label>
+			        <label><input type="radio" name="q3" value="c" /> c. The ocean </label>
+			        <label><input type="radio" name="q3" value="d" /> d. The night </label>
+			    </p>	
+			</div>
+		</div>	
+
+		<div class="panel panel-primary">
+			<div id="question4" class="panel-heading" style="background: #696969">
+				<h4>Question 4</h4>
+			</div>
+			<div class="panel-body">
+				<p>4. What do you have when you're sciapodous?</p>
+				<p>
+			        <label><input type="radio" name="q4" value="a" /> a. Huge nose </label>
+			        <label><input type="radio" name="q4" value="b" /> b. Huge chin </label>
+			        <label><input type="radio" name="q4" value="c" /> c. Huge feet </label>
+			        <label><input type="radio" name="q4" value="d" /> d. Huge ears </label>
+			    </p>	
+			</div>
+		</div>
+
+		<div class="panel panel-primary">
+			<div id="question5" class="panel-heading" style="background: #696969">
+				<h4>Question 5</h4>
+			</div>
+			<div class="panel-body">
+				<p>5. What are you full of when you're gambrinous?</p> 
+				<p>
+			        <label><input type="radio" name="q5" value="a" /> a. Beer </label>
+			        <label><input type="radio" name="q5" value="b" /> b. Joy </label>
+			        <label><input type="radio" name="q5" value="c" /> c. Chicken </label>
+			        <label><input type="radio" name="q5" value="d" /> d. Sweat </label>
+			    </p>   	
+			</div>
+		</div>
+
+		<div class="panel panel-primary">
+			<div id="question6" class="panel-heading" style="background: #696969">
+				<h4>Question 6</h4>
+			</div>
+			<div class="panel-body">
+				<p>6. Tropoclastics is actually the science of:</p>
+				<p>
+			        <label><input type="radio" name="q6" value="a" /> a. House keeping? </label>
+			        <label><input type="radio" name="q6" value="b" /> b. Ancient writing? </label>
+			        <label><input type="radio" name="q6" value="c" /> c. breaking habits? </label>
+			        <label><input type="radio" name="q6" value="d" /> d. Eavesdropping? </label>
+			    </p> 	
+			</div>
+		</div>				
+
+		<div class="panel panel-primary">
+			<div id="question7" class="panel-heading" style="background: #696969">
+				<h4>Question 7</h4>
+			</div>
+			<div class="panel-body">
+				<p>7. What do you most fear in hormephobia?</p> 
+				<p>
+			        <label><input type="radio" name="q7" value="a" /> a. Saliva </label>
+			        <label><input type="radio" name="q7" value="b" /> b. Shock </label>
+			        <label><input type="radio" name="q7" value="c" /> c. Static </label>
+			        <label><input type="radio" name="q7" value="d" /> d. Silence </label>
+			    </p>	
+			</div>
+		</div>	
+
+		<div class="panel panel-primary">
+			<div id="question8" class="panel-heading" style="background: #696969">
+				<h4>Question 8</h4>
+			</div>
+			<div class="panel-body">
+				<p>8. What does ponophobia mean?</p>
+				<p>
+			        <label><input type="radio" name="q8" value="a" /> a. The fear of overheating </label>
+			        <label><input type="radio" name="q8" value="b" /> b. The fear of oversleeping </label>
+			        <label><input type="radio" name="q8" value="c" /> c. The fear of overthinking </label>
+			        <label><input type="radio" name="q8" value="d" /> d. The fear of overworking </label>
+			    </p>	
+			</div>
+		</div>	
+
+		<div class="panel panel-primary">
+			<div id="question9" class="panel-heading" style="background: #696969">
+				<h4>Question 9</h4>
+			</div>
+			<div class="panel-body">
+				<p>9. Iatrapistia is the lack of faith in what?</p>
+				<p>
+			        <label><input type="radio" name="q9" value="a" /> a. The medical system </label>
+			        <label><input type="radio" name="q9" value="b" /> b. The judicial system </label>
+			        <label><input type="radio" name="q9" value="c" /> c. The educational system </label>
+			        <label><input type="radio" name="q9" value="d" /> d. The legal system </label>
+			    </p> 	
+			</div>
+		</div>	
+
+		<div class="panel panel-primary">
+			<div id="question10" class="panel-heading" style="background: #696969">
+				<h4>Question 10</h4>
+			</div>
+			<div class="panel-body">
+				<p>10. Where is the dactylion?</p>
+				<p>
+			        <label><input type="radio" name="q10" value="a" /> a. Thumb </label>
+			        <label><input type="radio" name="q10" value="b" /> b. Forefinger </label>
+			        <label><input type="radio" name="q10" value="c" /> c. Middle finger </label>
+			        <label><input type="radio" name="q10" value="d" /> d. Ring finger </label>
+			    </p>	
+			</div>
+		</div>	
+
+		<div class="panel panel-primary">
+			<div id="question11" class="panel-heading" style="background: #696969">
+				<h4>Question 11</h4>
+			</div>
+			<div class="panel-body">
+				<p>11. Presbycusis is the loss of what at old age?</p>
+				<p>
+			        <label><input type="radio" name="q11" value="a" /> a. Smelling </label>
+			        <label><input type="radio" name="q11" value="b" /> b. Hearing </label>
+			        <label><input type="radio" name="q11" value="c" /> c. Tasting </label>
+			        <label><input type="radio" name="q11" value="d" /> d. Feeling </label>
+			    </p> 	
+			</div>
+		</div>	
+
+		<div class="panel panel-primary">
+			<div id="question12" class="panel-heading" style="background: #696969">
+				<h4>Question 12</h4>
+			</div>
+			<div class="panel-body">
+				<p>12. An icononmicar writes about what?</p>
+				<p>
+			        <label><input type="radio" name="q12" value="a" /> a. Illness </label>
+			        <label><input type="radio" name="q12" value="b" /> b. Religion </label>
+			        <label><input type="radio" name="q12" value="c" /> c. Farming </label>
+			        <label><input type="radio" name="q12" value="d" /> d. Desserts </label>
+			    </p> 	
+			</div>
+		</div>	 -->
+
+  	</div>
+  	</form>
+
+  	<div id="doneButton" style="display: flex; justify-content: center">
+		<button style="width: 200px; height: 80px; margin-bottom: 20px; background-color: #212074;     font-size: 40px;" type="button" class="btn btn-primary btn-lg">Done</button>
+	</div>
+
+
+	<div id="allDone" class="jumbotron" style="background-color: rgba(123, 130, 127, 0.57);">
+		<h1 style="display: flex; justify-content: center">All Done!</h1><br>
+		<h2 id="totalCorrect" style="display: flex; justify-content: center">Correct Answers:</h2>
+		<h2 id="totalWrong" style="display: flex; justify-content: center">Incorrect Answers:</h2>
+		<h2 id="totalUnanswered" style="display: flex; justify-content: center">Not Answered:</h2>
+	</div>
+</div>
+  
+
+<!-- <script src="assets/javascript/app.js"></script> -->
+
+<script>
+
+//variables
+
+var countdownTimer = 0;
+var seconds = 59;
+
+// total number of questions
+var totQuestions = 2;
+// total number of choices in each question
+var totChoices = 4; 
+
+//initialize variables
+var rightAnswers = 0;
+var wrongAnswers = 0;
+var notAnswered = 12;
+
+//array of answers to all questions
+var qAnswers = ["b. Slightly drunk", "a. Dice"];
+
+// var qAnswers = ["b. Slightly drunk", "a. Dice", "d. The night", "c. Huge feet", "a. Beer", "c. Breaking habits", "b. Shock", "d. The fear of overworking", "a. The medical system", "c. The middle finger", "b. Hearing", "c. Farming"];
+
+$(document).ready(function(){
+
+$("#hideAll").load("load", function() {
+	$("#time").hide();
+    $("#StartButton").show();
+    $("#questionsContainer").hide();
+    $("#doneButton").hide();
+    $("#allDone").hide();
+});
+
+
+$("#startButton").on("click", function() {
+	countdownTimer = setInterval(secondPassed, 1000);
+	secondPassed(); 
+	$("#questionsContainer").show();
+	$("#time").show();
+	$("#startButton").hide();
+	$("#doneButton").show();     
+});
+
+$("#doneButton").on("click", function() {
+	clearInterval(countdownTimer);
+	$("#totalCorrect").html("<h2>" + "Correct Answers: " + rightAnswers + "</h2>");
+	$("#totalWrong").html("<h2>" + "Incorrect Answers: " + wrongAnswers + "</h2>");
+	$("#totalUnanswered").html("<h2>" + "Unanswered: " + wrongAnswers + "</h2>"); 
+	$("#questionsContainer").hide();   
+	$("#time").hide();
+	$("#startButton").hide();
+	$("#doneButton").hide();
+	$("#allDone").show();
+});
+
+// countdown timer 
+// this sets the time limit  at 1 mim to finish the quiz
+// The game ends when the time runs out 
+function secondPassed() {
+    var minutes = Math.round((seconds - 30)/60);
+    var remainingSeconds = seconds % 60;
+    if (remainingSeconds < 10) {
+        remainingSeconds = "0" + remainingSeconds;  
+    }
+    $("#display").html("<h2><strong>" + "Time Remaining: " + minutes + ":" + seconds + "<strong></h2>");
+    if (seconds == 0) {
+        clearInterval(countdownTimer);
+        $("#display").html("<h2><strong>" + "Times Up!" + "</strong></h2>");
+        $("#questionsContainer").hide();
+		$("#time").show();
+		$("#startButton").hide();
+		$("#doneButton").hide();
+		$("#allDone").show();   
+    } else {
+        seconds--;
+    }
+};
+  
+// The page will reveal the number of questions that players answer correctly and incorrectly.
+function getAnswers(form) {
+  var currIndex = 0;
+  var currChoice = 0;
+  for (var i = 0; i < totQuestions; i++) {
+      currIndex = i*totChoices;
+      for (var j = 0; j < totChoices; j++) {
+        currChoice = form.elements[currIndex + j];
+        if (currChoice.checked) {
+            if (currChoice.value == qAnswers[i]) {
+               rightAnswers++;
+               notAnswered--;
+               alert("correct!");   
+            } else {
+            	wrongAnswers++;
+ 				notAnswered--;
+ 				alert("Not Correct!");
+            }
+        }
+      }
+  }
+  form.totalCorrect.value = rightAnswers;    
+  $("#totalCorrect").html("<h2>" + "Correct Answers: " + rightAnswers + "</h2>");
+  $("#totalWrong").html("<h2>" + "Incorrect Answers: " + wrongAnswers + "</h2>");
+  $("#totalUnanswered").html("<h2>" + "Unanswered: " + wrongAnswers + "</h2>");   
+};
+
+
+});
+
+	
+</script>
+
+</body>
+
+</html>
